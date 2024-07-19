@@ -74,7 +74,7 @@ html {
   margin-left: 0.2em;
   height: 2em;
   width: 1.2em;
-  vertical-align: middle; 
+  vertical-align: middle;
   transform: translateY(-4px);
 }
 
@@ -173,7 +173,7 @@ html {
 #write h4::before {
   content: "";
   margin-right: 7px;
-  display: inline-block;
+  display: initial;
   background-color: #ffc840;
   width: 10px;
   height: 10px;
@@ -191,7 +191,7 @@ html {
 #write h5::before {
   content: "";
   margin-right: 7px;
-  display: inline-block;
+  display: initial;
   background-color: #ffffff;
   width: 10px;
   height: 10px;
@@ -252,7 +252,7 @@ li.md-list-item {
   list-style-type: decimal;
 }
 #write ol ol {
-  list-style-type: lower-alpha; 
+  list-style-type: lower-alpha;
 }
 #write ol ol ol{
   list-style-type:lower-roman;
@@ -576,6 +576,9 @@ pre.CodeMirror-line {
 #write table tr td {
   font-size: 14px;
   color: #000;
+  border-width: 0 1px 1px 1px;
+  border-style: solid;
+  border-color: gray;
 }
 
 #write .footnotes {
@@ -709,4 +712,19 @@ body.typora-export {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+/* 增加以下Class */
+/* 隔行背景颜色 */
+#write table tbody tr:nth-child(2n) {
+  background-color: aliceblue;
+}
+
+/* hover高亮 */
+#write table tbody tr:hover {
+  background-color: black;
+}
+
+#write table tbody tr:hover td {
+  color: white;
 }
